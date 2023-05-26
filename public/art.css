@@ -1,0 +1,76 @@
+:root{
+    --border-color: #CA35F7;
+    --text-color: #AEAEB2;
+    --secondary-color: #0FEFFD;
+    --fade-zero: rgba(0, 0, 0, 0) 34.32%;
+    --fade: rgba(0, 0, 0, 0.72) 72.5%;
+    --second-black: #262626;
+    --pagination: #1D1D1D;
+    --paginacao-border: #333333;
+    --white: #FFFFFF;
+}
+
+.heading{
+    color: var(--border-color);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 18px;
+}
+
+.card{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(images/Self-portrait\,\ Rembrandt\ van\ Rijn\,\ c.\ 1628.jpg);
+    width: 100%;
+    aspect-ratio: 1408 / 850;
+    border-radius: 8px;
+    position: relative;
+}
+.card > span{
+    position: absolute;
+    bottom: 28px;
+    left: 33px;
+    font-size: clamp(24px, 36px, 56px);
+    font-weight: 500;
+    line-height: 64px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: var(--white);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+table{
+    color: var(--white);
+    width: 100%;
+}
+table td{
+    padding: 16px 0px;
+}
+table span{
+    font-size: 16px;
+}
+table h2{
+    font-size: 24px;
+}
+.border-bottom{
+    border-bottom: 1px solid var(--table-row);
+}
+
+@media all and (max-width: 768px){
+    .card > span{
+        font-size: 16px;
+        line-height: 16px;
+    }
+    table td{
+        padding: 8px 0px;
+    }
+    table span{
+        font-size: 12px;
+    }
+    table h2{
+        font-size: 14px;
+    }
+}
+

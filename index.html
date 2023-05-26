@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Art Museum - Demo</title>
+    <!-- bootstrap link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <!-- boxicons link-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- My own CSS links -->
+    <link rel="stylesheet" href="public/header.css">
+    <link rel="stylesheet" href="public/home.css">
+    <link rel="stylesheet" href="public/paginaton_and_footer.css">
+
+</head>
+  <body>
+    <header>
+        <div class="header">
+            <div class="logo">
+                <svg width="54" height="48" viewBox="0 0 54 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M52.4614 38.2086L32.3181 3.26422C31.1617 1.25044 28.9941 0 26.6717 0C25.5347 0 24.4098 0.302916 23.4203 0.876032C22.4091 1.46005 21.5999 2.28883 21.035 3.27634L19.1553 6.53328L31.0541 27.1752H18.6183L9.41085 43.1485C8.48914 44.7515 6.43767 45.3004 4.8398 44.3747C3.24314 43.4538 2.69277 41.3964 3.61448 39.7958L19.1432 12.8569L17.3252 9.70299L0.871126 38.2086C-0.923909 41.3237 0.145371 45.3247 3.25644 47.1228C4.27976 47.7165 5.39863 47.9952 6.50178 47.9952C8.75646 47.9952 10.9507 46.8283 12.1554 44.737L20.4484 30.3473H36.542L23.7784 8.20174C22.8567 6.60235 23.407 4.54616 25.0037 3.62408C25.5129 3.32965 26.0887 3.17334 26.6717 3.17334C27.868 3.17334 28.9796 3.81674 29.576 4.8515L49.7169 39.7958C50.6422 41.3964 50.0906 43.4538 48.4916 44.3747C47.9835 44.6704 47.4053 44.8254 46.8235 44.8254C45.6285 44.8254 44.5156 44.1845 43.9205 43.1485L40.4079 37.0526H20.2536L18.4247 40.2248H38.5777L41.1784 44.737C42.3384 46.7496 44.4999 48 46.8235 48C47.963 48 49.0867 47.6947 50.0773 47.1228C53.1896 45.3247 54.2577 41.3237 52.4614 38.2086Z" fill="url(#paint0_linear_2032_232)"/>
+                    <defs>
+                    <linearGradient id="paint0_linear_2032_232" x1="1.35418" y1="-9.31902e-07" x2="47.2126" y2="52.5298" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#0FEFFD"/>
+                    <stop offset="0.723958" stop-color="#FF00F5"/>
+                    <stop offset="1" stop-color="#0FEFFD" stop-opacity="0"/>
+                    </linearGradient>
+                    </defs>
+                </svg>
+                <span class="d-none d-lg-block">Art API</span>
+            </div>
+            <form class="search" id="form-1">
+                <i class='bx bx-menu d-inline d-md-none' id="search-toggle" onclick="document.querySelector('#form-2').classList.toggle('d-none');"></i>
+                <input id="input-text" type="text" required placeholder="Please type your search" class="d-none d-md-inline">
+                <button id="button-to-submit" type="submit" class="d-none d-md-inline">Search</button>
+            </form>
+        </div>
+
+        <form action="" id="form-2" class="my-4 d-none">
+            <input type="text" id="input-text-2" required placeholder="Please type your search">
+            <i class='bx bx-search-alt-2' id="button-to-submit-2"></i>
+        </form>
+    </header>
+
+    <main>
+        <!-- <script>
+            getSomeArtPieces();
+            getAllArtPieces();
+        </script> -->
+        <script>
+            fetch('https://www.rijksmuseum.nl/api/en-US/collection?key=2esrTh6M')
+            .then(response => response.json())
+            .then(data => {
+                // Aqui você pode acessar os dados retornados pela API
+                console.log(data);
+            })
+            .catch(error => {
+                // Trate qualquer erro que ocorrer durante a solicitação
+                console.error('Ocorreu um erro:', error);
+            });
+
+        </script>
+
+        <h1 class="heading my-4">All artwork</h1>
+        <div class="container-of-arts">
+            <div class="art-piece">
+                <h3>Portretten van Giuliano en Francesco Giamberti da Sangalo</h3>
+                <h6>Piero di Cosimo</h6>
+            </div>
+            <div class="art-piece">
+                <h3>Lorem ipsum, dolor sit amet consectetur.</h3>
+                <h6>Piero di Cosimo</h6>
+            </div>
+            <div class="art-piece">
+                <h3>Lorem ipsum dolor sit.</h3>
+                <h6>Piero di Cosimo</h6>
+            </div>
+            <div class="art-piece">
+                <h3>Lorem, ipsum dolor.</h3>
+                <h6>Piero di Cosimo</h6>
+            </div>
+            <div class="art-piece">
+                <h3>Lorem ipsum, dolor sit amet consectetur.</h3>
+                <h6>Piero di Cosimo</h6>
+            </div>
+            <div class="art-piece">
+                <h3>Lorem ipsum dolor sit.</h3>
+                <h6>Piero di Cosimo</h6>
+            </div>
+            <div class="art-piece">
+                <h3>Lorem, ipsum dolor.</h3>
+                <h6>Piero di Cosimo</h6>
+            </div>
+            <div class="art-piece">
+                <h3>Lorem, ipsum dolor.</h3>
+                <h6>Piero di Cosimo</h6>
+            </div>
+            <div class="art-piece">
+                <h3>Lorem, ipsum dolor.</h3>
+                <h6>Piero di Cosimo</h6>
+            </div>
+        </div>
+
+        <div class="my-4">
+            <nav aria-label="Page navigation example">
+                <form action="" class="pagination">
+                    <button class="setas" id="seta_esquerda" name="pagina" value="">
+                        <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 10L3.707 5.707L8 1.414L6.586 0L0.879002 5.707L6.586 11.414L8 10Z" fill="#C4C4C4"/>
+                        </svg>
+                    </button>
+                    
+                    <button class="page-link" name="pagina" value="">1</button>
+                    <button class="page-link" name="pagina" value="">2</button>
+                    <button class="page-link" name="pagina" value="">...</button>
+                    <button class="page-link" name="pagina" value="">11</button>
+    
+                    <button class="setas" id="seta_direita" name="pagina" value="">
+                        <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.74228e-07 2L4.293 6.293L1.23616e-07 10.586L1.414 12L7.121 6.293L1.414 0.586L8.74228e-07 2Z" fill="#C4C4C4"/>
+                        </svg>
+                    </button>
+                </form>
+            </nav>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        Art API
+    </footer>
+
+
+
+    <script src="public/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  </body>
+</html>
