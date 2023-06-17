@@ -1,0 +1,140 @@
+
+.heading{
+    color: var(--text-color);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 56px;
+    line-height: 64px;
+}
+.container-of-arts{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem 0;
+    align-items: center;
+    padding: 0px;
+}
+.container-of-arts .art-piece{
+    isolation: isolate;
+
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    aspect-ratio: 450 / 364;
+    width: 31%;
+    left: 0px;
+    top: 0px;
+    border-radius: 8px;
+}
+
+.art-piece:nth-child(1){
+    background-image:
+    linear-gradient(to bottom, var(--fade-zero), var(--fade)), url(images/Het\ zieke\ kind.jpg);
+}
+.art-piece:nth-child(2){
+    background-image:
+    linear-gradient(to bottom, var(--fade-zero), var(--fade)), url(images/1200px-De_zielenvisserij_Rijksmuseum_SK-A-447.jpeg);
+}
+.art-piece:nth-child(3){
+    background-image:
+    linear-gradient(to bottom, var(--fade-zero), var(--fade)), url(images/andries\ de\ graeff.jpg);
+}
+.art-piece:nth-child(4){
+    background-image:
+    linear-gradient(to bottom, var(--fade-zero), var(--fade)), url(images/Boekenkist\ van\ Hugo\ de\ Groot.jpg);
+}
+.art-piece:nth-child(5){
+    background-image:
+    linear-gradient(to bottom, var(--fade-zero), var(--fade)), url(images/De_bedreigde_zwaan_Rijksmuseum_SK-A-4.jpeg);
+}
+.art-piece:nth-child(6){
+    background-image:
+    linear-gradient(to bottom, var(--fade-zero), var(--fade)), url(images/Een_vrolijke_vioolspeler_Rijksmuseum_SK-A-180.jpeg);
+}
+.art-piece:nth-child(7){
+    background-image:
+    linear-gradient(to bottom, var(--fade-zero), var(--fade)), url(images/Nachtwacht360_media.jpg);
+}
+.art-piece:nth-child(8){
+    background-image:
+    linear-gradient(to bottom, var(--fade-zero), var(--fade)), url(images/Uitbraak-van-de-Royal-Scots-Greys-tijdens-de-Slag-bij-Waterloo-cc.jpg);
+}
+.art-piece:nth-child(9){
+    background-image:
+    linear-gradient(to bottom, var(--fade-zero), var(--fade)), url(images/Zittende\ Amor.jpg);
+}
+
+.art-piece h3{
+    color: var(--text-color);
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 40px;
+    letter-spacing: 0em;
+    text-align: left;
+    position: absolute;
+    margin: 0;
+    padding: 0 15% 11% 5.3%;
+    bottom: 0;
+    left: 0;
+}
+.art-piece h6{
+    background: rgba(29, 29, 29, 0.5);
+    border-radius: 0px 8px;
+    color: var(--secondary-color);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding: 4px 8px;
+
+    position: absolute;
+    height: 16px;
+    right: 0;
+    top: 0;
+    height: 24px;
+}
+@media all and (max-width: 1200px){
+    .container-of-arts .art-piece{
+        width: 47%;
+    }
+    .art-piece h3{
+        font-size: 28px;
+    }
+}
+@media all and (max-width: 992px){
+    .container-of-arts .art-piece{
+        width: 47%;
+    }
+    .art-piece h3{
+        font-size: 24px
+    }
+}
+@media all and (max-width: 768px){
+    .art-piece h3{
+        font-size: 20px;
+    }
+}
+
+@media all and (max-width: 576px){
+    .heading{
+        text-align: center;
+        font-size: 36px;
+    }
+    .container-of-arts{
+        justify-content: center;
+    }
+    .container-of-arts .art-piece{
+        width: 94%;
+    }
+    .art-piece h3{
+        font-size: 24px;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.9);
+    }
+}
+@media all and (max-width: 360px){
+    .art-piece h3{
+        font-size: 16px;
+    }
+}
